@@ -5,9 +5,31 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+body {
+	background: #141414;
+	color: #ffffff;
+}
+
+.park-app:-webkit-scrollbar > .row {
+	display: none;
+	overflow-x: auto;
+	flex-wrap: nowrap;
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+}
+

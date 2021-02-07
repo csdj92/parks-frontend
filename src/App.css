@@ -80,3 +80,129 @@ transform: scale(1.08);
 	margin-right: 5px;
 	flex-direction: row;
 }
+
+.image-container:hover {
+	cursor: pointer;
+	transform: scale(1.1);
+}
+
+.image-container:hover .overlay {
+	opacity: 1;
+}
+
+.overlay {
+	position: absolute;
+	background: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	transition: 0.5s ease;
+	opacity: 0;
+	bottom: 0;
+	font-size: 20px;
+	padding: 20px;
+	text-align: center;
+}
+
+img{
+width: 300px;
+height: 400px;
+}
+
+ .example::-webkit-scrollbar {
+	display: none;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Karma|Nanum+Gothic:500");
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+
+
+.container-fluid {
+margin: 0 auto;
+display: flex;
+flex-wrap: wrap;
+
+
+}
+
+h1, h2, h3 {
+  color: #fff;
+  margin: 0.5em 0;
+  font-family: "Karma", "Georgia", serif;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 1.5em;
+  line-height: 1.25;
+}
+h5{
+	text-align: center;
+    font-size: 15px;
+}
+
+.tiles {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 2em;
+}
+.tiles .tile {
+  width: calc(50% - 3em);
+  background-color: #f5f5f5;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-width: 300px;
+  margin: 1em auto;
+}
+.tiles .tile .count {
+  position: absolute;
+  font-size: 0.75em;
+  font-family: "Nanum Gothic", "Verdana", sans-serif;
+  top: 0;
+  right: 0;
+  background-color: #c34d41;
+  color: #fff;
+  padding: 0.5em 0.75em;
+  box-shadow: 0 0 3px #222;
+}
+.tiles .tile h2 {
+  color: #222;
+  margin: 0 2em 0 0;
+  font-weight: 600;
+}
+.tiles .tile p {
+  font-family: "Nanum Gothic", "Verdana", sans-serif;
+  font-size: 0.9em;
+}
+
+.load-more {
+  display: block;
+  border: 0;
+  margin: 1em auto;
+  padding: 0.75em 1em;
+  font-size: 1em;
+  background-color: #c34d41;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: "Nanum Gothic", "Verdana", sans-serif;
+  cursor: pointer;
+}
+.load-more:focus {
+  outline: 1px solid rgba(255, 255, 255, 0.5);
+}

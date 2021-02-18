@@ -14,7 +14,18 @@ const parkId = parseInt(urlArray[urlArray.length-1])
 
 const park = this.props.parks.find(park => park.id === parkId)
 
-
+if (parkId > 468){
+    return(
+        <div>
+        <br></br>
+        <img src={park.images} alt='parks'/>
+        <h1>{park.fullName}</h1> <br></br>
+        <p>{park.description} {park.directionsInfo}</p> <br></br>
+        <a href={park.url} target='_blank' rel="noreferrer">Directions</a>
+        <br></br>
+        </div>
+    )
+}else{
 
 return (
 <Container fluid>
@@ -64,7 +75,7 @@ return (
     
 </Container>
 );
-}
+}}
 }
 const mapStateToProps = (state) => {
 return {

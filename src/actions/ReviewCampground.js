@@ -9,8 +9,8 @@ export const addReview = (parks) => {
             }
         })
         .then(response => response.json())
-        .then(parks => { 
-            return dispatch({ type:'REVIEW_ADDED', park:parks })
+        .then(park => { 
+            return dispatch({ type:'REVIEW_ADDED', park:park })
         })
     }
 }

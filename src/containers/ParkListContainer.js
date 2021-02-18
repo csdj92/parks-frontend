@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Card from 'react-bootstrap/Card';
 import Park from '../components/Park'
+import Upvote from '../components/Upvote'
+import {connect} from 'react-redux';
 
 class ParkListContainer extends Component {
 constructor(props) {
@@ -26,11 +28,6 @@ handleOnClick(e) {
 <Park/>
 }
 
-
-
-
-
-
 render(){
 	
 return(
@@ -46,6 +43,7 @@ return(
 						alt='parks' key={park.id}/>
 						<Card.Text>{park.description} {park.directionsUrl}</Card.Text>
 				</div>
+				<Upvote/>
 			</Card>
 		</div>
 		)})}
@@ -62,4 +60,10 @@ return(
 }
 }
 
-export default ParkListContainer
+const mapStateToProps = (state) => {
+	return {
+	parks: state.parksReducer.parks
+	}
+	}
+
+export default connect(mapStateToProps)(ParkListContainer) 

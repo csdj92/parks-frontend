@@ -34,6 +34,9 @@ class ParkReviewForm extends Component {
 
     handleOnSubmit = (e) => {
         e.preventDefault()
+        if (this.state.fullName === '') {
+            alert('Please fill in all boxes')
+        } else { 
         this.props.addReview(this.state)
         this.setState({
             state: '',
@@ -52,7 +55,7 @@ class ParkReviewForm extends Component {
             directionsUrl: '',
             standardHours: '',
             images: '',
-        })
+        })}
     }
 
     render() {
@@ -74,10 +77,6 @@ class ParkReviewForm extends Component {
             <input type="text" name='name' value={this.state.name} onChange={(event) => this.handleOnChange(event)} />
             <label >latitude: </label>
             <input type="text" name='latitude' value={this.state.latitude} onChange={(event) => this.handleOnChange(event)} />
-            <label >Longitude: </label>
-            <input type="text" name='Longitude' value={this.state.longitude} onChange={(event) => this.handleOnChange(event)} />
-            <label >Activities: </label>
-            <input type="text" name='activites' value={this.state.activities} onChange={(event) => this.handleOnChange(event)} />
             <label >Phone Number: </label>
             <input type="text" name='phoneNumber' value={this.state.phoneNumber} onChange={(event) => this.handleOnChange(event)} />
             <label >Image url: </label>

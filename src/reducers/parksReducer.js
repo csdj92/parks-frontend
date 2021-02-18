@@ -22,14 +22,14 @@ const parksReducer = (state =
         case 'ADD_REVIEW': 
         return {
             ...state,
-                parks: action.parks,
-                loading: false
+                parks: state.parks,
+                loading: true
     }
 
     case 'REVIEW_ADDED':
             return {
             ...state,
-            parks: action.parks,
+            parks: state.parks.concat(action.park),
             loading: false
         }
         default:

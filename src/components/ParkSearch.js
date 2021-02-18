@@ -16,8 +16,11 @@ class ParkSearch extends Component {
     }
 
     handleClick= () =>{
-        const matchedPark = this.props.park.find(park =>park.fullName.substring(0,3)=== this.state.search.substring(0,3))       
-        this.props.history.push(`/parks/${matchedPark.id}`)
+        const matchedPark = this.props.park.find(park =>park.fullName.substring(0,3)=== this.state.search.substring(0,3)) 
+        if(!matchedPark){
+            alert("Sorry, we cant find that park. Please try again.")
+        } else {this.props.history.push(`/parks/${matchedPark.id}`)}
+        
     }
 
     render() {

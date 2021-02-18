@@ -1,4 +1,6 @@
-const parksReducer = (state = { parks: [], loading: false }, action) => {
+const parksReducer = (state =
+    { parks: [],
+    reviews:[], loading: false }, action) => {
     switch(action.type){
 
         case "LOADING_PARKS":
@@ -16,11 +18,24 @@ const parksReducer = (state = { parks: [], loading: false }, action) => {
                 loading: false
             }
 
+            
+        case 'ADD_REVIEW': 
+        return {
+            ...state,
+                parks: action.parks,
+                loading: false
+    }
 
-
+    case 'REVIEW_ADDED':
+            return {
+            ...state,
+            parks: action.parks,
+            loading: false
+        }
         default:
             return state;
         }
-}
+    }
+
 
 export default parksReducer;

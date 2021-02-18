@@ -6,3 +6,5 @@ export const fetchParks = () => {
             .then(data => { dispatch({ type: "ADD_PARKS", parks: data })})
     }
 }
+
+

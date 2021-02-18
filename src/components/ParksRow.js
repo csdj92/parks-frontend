@@ -3,18 +3,22 @@ import ParkListContainer  from '../containers/ParkListContainer'
 import ScrollContainer from 'react-indiana-drag-scroll'
 import ParksListHeading from '../components/ParksListHeading'
 import {connect} from 'react-redux';
+import ParkReviewForm from './ParkReviewForm'
 
 class ParksRow extends Component {
     render(){
-        return(
+        return(<div>
         <ScrollContainer className="container-fluid" >
         <div>  
-            <ParksListHeading
+            <ParksListHeading parks={this.props.parks}
             />
-            <ParkListContainer 
+            <ParkListContainer parks={this.props.parks}
             />
-        </div>
+        </div>  
+        
             </ScrollContainer> 
+            <ParkReviewForm/></div>
+        
         )
     }
     
